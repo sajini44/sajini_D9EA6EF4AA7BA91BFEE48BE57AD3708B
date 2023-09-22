@@ -1,0 +1,23 @@
+class Student:
+    def __init__(self, name, roll_number, cgpa):
+        self.name = name
+        self.roll_number = roll_number
+        self.cgpa = cgpa
+
+def sort_students(students):
+    # Sort the students based on their CGPA in descending order
+    return sorted(students, key=lambda student: student.cgpa, reverse=True)
+
+# Define a list of Student objects
+students = [
+    Student("Srikanth", "A124", 8.9),
+    Student("Saumya", "A125", 9.1),
+    Student("Mahidhar", "A126", 9.9),
+]
+
+# Sort the students
+sorted_students = sort_students(students)
+
+# Print the sorted list of students
+for student in sorted_students:
+    print("Name: {}, Roll number: {}, CGPA: {}".format(student.name, student.roll_number, student.cgpa))
